@@ -5,7 +5,8 @@
 <?php
 
 //Printing a statement:
-echo "Hello there!\n";
+echo "Hello there!";
+echo "<br>";
 
 //Variable declaration:
 $num1 = 13;
