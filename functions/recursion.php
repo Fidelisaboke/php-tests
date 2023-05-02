@@ -47,7 +47,7 @@ function power($base, $exponent){
     } else if($exponent==0 and $base==0){
         echo "undefined";
     } else{
-        return pow($base, $exponent-1)*$base;
+        return power($base, $exponent-1)*$base;
     }
 }
 
