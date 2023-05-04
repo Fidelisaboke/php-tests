@@ -5,6 +5,7 @@ Calculations involving circles
 //defining a constant pi and assigning it the pi() value:
 
 define("pi",pi());
+
 /*Circumference of a circle
 Circumference = pi*radius**2 -> for radius**2, we can use the pow() function as well
 */
