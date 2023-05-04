@@ -19,4 +19,11 @@ echo "Random number 2 generated: ". rand(50, 500). "\n"; # Prints out a random i
 
 //abs() - returns the absolute value of a number:
 $num3 = -8987;
-echo "Absolute value of ".$num3." is: ". abs($num3);
+echo "Absolute value of ".$num3." is: ". abs($num3). "\n"; # Prints 8987
+
+//pi() - returns the value of π
+echo "pi: ".pi() ."\n"; # Prints 3.1415926535898
+
+//sqrt() - returns the square root of a number:
+$num4 = 36;
+echo "The square root of ".$num4. " is: " .sqrt($num4)."\n";
