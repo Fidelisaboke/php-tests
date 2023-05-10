@@ -20,13 +20,29 @@ $cars = ["Volvo", "BMW", "Toyota"];
 
 // Initializing associative arrays:
 $patients = ['A001'=>"Doe", 'A002'=>"Doeson", 'A003'=>"Jane", 'A004'=>"Janeson"];
-$beverages = 
+
+//Multidimensional arrays:
+$numbers = array (
+    array(12, 353, 543, 123),
+    array(324, 23, 242)
+);
+
+$ordered_numbers = array();
+$number = 1;
+for($i = 0; $i<3; $i++){
+    for($j=0; $j<3; $j++){
+        array_push($ordered_numbers, $number);
+        $number +=1;
+    }
+}
 
 //Print the contents of the array with their indexes:
 print_r($names);
 print_r($fruits);
 print_r($cars);
 print_r($patients);
+print_r($numbers);
+print_r($ordered_numbers);
 
 //Print a single element of an array:
 echo $names[1]."\n";
