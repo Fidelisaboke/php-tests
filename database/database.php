@@ -122,7 +122,7 @@ $sql = "CREATE TABLE db_drug_dispense.tbl_patients (
   }
   */
 
-// Select rows form table tbl_patients (check results on a web browser):
+/* Select rows form table tbl_patients (check results on a web browser):
   $sql = "SELECT * FROM db_drug_dispense.tbl_patients";
   $result_set = $conn->query($sql);
 
@@ -139,6 +139,34 @@ $sql = "CREATE TABLE db_drug_dispense.tbl_patients (
   } else{
     echo "No data present";
   }
+  */
+
+  /*
+  // Delete a row from table tbl_patients (using prepared statement)
+  $sql = "DELETE FROM db_drug_dispense.tbl_patients WHERE patient_ssn=?";
+  $statement = $conn->prepare($sql);
+  $statement->bind_param("i", $patient_ssn);
+
+  // Assigning a value to the parameter:
+  $patient_ssn = 2;
+
+  if($statement->execute() === TRUE){
+    echo "Record with patient_ssn=".$patient_ssn." deleted successfully";
+  }
+  else{
+    echo "Error deleting record: ".$conn->error;
+  }
+  */
+
+  /*
+  // Update a row in tbl_patients
+  $sql = "UPDATE db_drug_dispense.tbl_patients SET patient_firstname='Derrick' WHERE patient_ssn=2";
+  if($conn->query($sql) === TRUE){
+    echo "Data updated successfully.";
+  } else{
+    echo "Data modification error: ".$conn->error;
+  }
+  */
   
 
 // Close the database connection
