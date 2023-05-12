@@ -44,6 +44,19 @@ $sql = "CREATE TABLE db_drug_dispense.tbl_patients (
   }
   */
 
+  // Inserting data into the table
+  /*
+  $sql = "INSERT INTO db_drug_dispense.tbl_patients 
+  (patient_firstname, patient_surname, patient_address, patient_email, patient_phone)
+  VALUES ('Doe', 'Dawson', '00200-Nairobi, Kenya', 'doe002@gmail.com', '+2547123456789')";
+
+  if ($conn->query($sql) === TRUE) {
+    echo "Row inserted into tbl_patients";
+  } else {
+    echo "Error inserting record into the table: ".$conn->error;
+  }
+  */
+
 // Close the database connection
 $conn->close();
 ?>
