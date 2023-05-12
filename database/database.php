@@ -122,7 +122,7 @@ $sql = "CREATE TABLE db_drug_dispense.tbl_patients (
   }
   */
 
-// Select rows form a table (check results on a web browser):
+// Select rows form table tbl_patients (check results on a web browser):
   $sql = "SELECT * FROM db_drug_dispense.tbl_patients";
   $result_set = $conn->query($sql);
 
