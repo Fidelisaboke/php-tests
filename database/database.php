@@ -122,7 +122,8 @@ $sql = "CREATE TABLE db_drug_dispense.tbl_patients (
   }
   */
 
-/* Select rows form table tbl_patients (check results on a web browser):
+  /*
+ //Select rows form table tbl_patients (check results on a web browser):
   $sql = "SELECT * FROM db_drug_dispense.tbl_patients";
   $result_set = $conn->query($sql);
 
@@ -140,6 +141,7 @@ $sql = "CREATE TABLE db_drug_dispense.tbl_patients (
     echo "No data present";
   }
   */
+  
 
   /*
   // Delete a row from table tbl_patients (using prepared statement)
@@ -160,13 +162,14 @@ $sql = "CREATE TABLE db_drug_dispense.tbl_patients (
 
   /*
   // Update a row in tbl_patients
-  $sql = "UPDATE db_drug_dispense.tbl_patients SET patient_firstname='Derrick' WHERE patient_ssn=2";
+  $sql = "UPDATE db_drug_dispense.tbl_patients SET patient_firstname='Derrick' WHERE patient_ssn=1";
   if($conn->query($sql) === TRUE){
     echo "Data updated successfully.";
   } else{
     echo "Data modification error: ".$conn->error;
   }
   */
+  
   
 
 // Close the database connection
