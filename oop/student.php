@@ -59,6 +59,13 @@ class Undergraduate extends Student{
     public function getUndergradCourse(){
         return $this->undergrad_course;
     }
+
+    //Method(s)
+    //To override the greetStudent() method, we redefine it:
+    public function greetStudent(){
+        parent::greetStudent();
+        echo "You study ".$this->undergrad_course;
+    }
 }
 
 //Object instantiation:
