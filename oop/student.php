@@ -6,6 +6,15 @@ class Student{
     private $adm_no;
     private $student_name;
 
+    //Constant attribute
+    const OBJECT_TITLE ='Object Details';
+
+    /*
+    Accessing the constant
+    Within the class - self::OBJECT_TITLE
+    Outside the class - Student::OBJECT_TITLE
+    */
+
     //Constructor method that runs when an object is being created:
     public function __construct(){
         echo "Student object created.<br>";       
@@ -64,7 +73,7 @@ class Undergraduate extends Student{
     //To override the greetStudent() method, we redefine it:
     public function greetStudent(){
         parent::greetStudent();
-        echo "You study ".$this->undergrad_course;
+        echo "You study <b>".$this->undergrad_course."</b>";
     }
 }
 
@@ -88,12 +97,14 @@ $undergrad_one->setUndergradCourse("Bachelor in Computer Science");
 
 //Get the attributes and display them:
 //For student_one:
+echo "<h3>".Student::OBJECT_TITLE."</h3>"; //Access the constant attribute
 echo "<b>Student No: </b>".$student_one->getAdmNo()."<br>";
 echo "<b>Student name: </b>".$student_one->getStudentName()."<br>";
 echo $student_one->greetStudent(); //Greet student
 echo "<br>";
 
 //For undergrad_one:
+echo "<h3>".Undergraduate::OBJECT_TITLE."</h3>"; //Access the constant attribute -> same as the Student one
 echo "<b>Student No: </b>".$undergrad_one->getAdmNo()."<br>";
 echo "<b>Student name: </b>".$undergrad_one->getStudentName()."<br>";
 echo "<b>Undergraduate course: </b>".$undergrad_one->getUndergradCourse()."<br>";
