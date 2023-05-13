@@ -1,4 +1,6 @@
 <?php
+// Practising OOP in PHP:
+
 class Student{
     //Attributes
     private $adm_no;
@@ -6,13 +8,13 @@ class Student{
 
     //Constructor method that runs when an object is being created:
     public function __construct(){
-        echo "An object of the student class has been created.";       
+        echo "Student object created.<br>";       
 
     }
 
     //Destructor method that is called at the end of the script:
     public function __destruct(){
-        echo "This is student no: ".$this->adm_no."\n";
+        echo "Script for student exited.<br>";
     }
 
     // Setters and getters:
@@ -33,21 +35,64 @@ class Student{
     //Method(s):
 
     public function greetStudent(){
-        echo "Hello ".$this->student_name."\n";
+        echo "<i>Hello </i>".$this->student_name."<br>";
+    }
+}
+
+//Inheritance:
+class Undergraduate extends Student{
+    private $undergrad_course;
+
+    public function __construct(){
+        echo "Undergraduate object created.<br>";
+    }
+
+    public function __destruct(){
+        echo "Script for undergraduate exited.<br>";
+    }
+
+    //Setters and getters:
+    public function setUndergradCourse($undergrad_course){
+        $this->undergrad_course=$undergrad_course;
+    }
+
+    public function getUndergradCourse(){
+        return $this->undergrad_course;
     }
 }
 
 //Object instantiation:
 $student_one = new Student();
-var_dump($student_one instanceof Student); // Checking whether an object belongs to a class.
+$undergrad_one = new Undergraduate();
+
+ // Checking whether an object belongs to a class.
+var_dump($student_one instanceof Student); //Returns bool(true)
+var_dump($undergrad_one instanceof Student); //Returns bool(true) -> Probably due to inheritance
 
 //Set the attributes:
+//For student_one:
 $student_one->setAdmNo(1001);
 $student_one->setStudentName("Doe Doeson");
 
-//Get the attributes and display them:
-echo "Student No: ".$student_one->getAdmNo()."\n";
-echo "Student name: ".$student_one->getStudentName()."\n";
+//For undergrad_one:
+$undergrad_one->setAdmNo(2001);
+$undergrad_one->setStudentName("Jane Janeson");
+$undergrad_one->setUndergradCourse("Bachelor in Computer Science");
 
-echo $student_one->greetStudent();
+//Get the attributes and display them:
+//For student_one:
+echo "<b>Student No: </b>".$student_one->getAdmNo()."<br>";
+echo "<b>Student name: </b>".$student_one->getStudentName()."<br>";
+echo $student_one->greetStudent(); //Greet student
+echo "<br>";
+
+//For undergrad_one:
+echo "<b>Student No: </b>".$undergrad_one->getAdmNo()."<br>";
+echo "<b>Student name: </b>".$undergrad_one->getStudentName()."<br>";
+echo "<b>Undergraduate course: </b>".$undergrad_one->getUndergradCourse()."<br>";
+echo $undergrad_one->greetStudent(); //Greet undergraduate
+echo "<br>";
+
+//Calling methods:
+
 ?>
