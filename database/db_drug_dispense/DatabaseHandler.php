@@ -35,6 +35,11 @@ class DatabaseHandler{
         }
     }
 
+    public function readTable($sql){
+        $this->establishConnection();
+        if($this->conn->query)
+    }
+
 }
 
 $trade_name = 'Panadol Xtra';
@@ -47,6 +52,5 @@ $db=new DatabaseHandler();
 $sql = "INSERT INTO db_drug_dispense.tbl_drugs (trade_name, drug_formula, administration_method, drug_price, expiry_date) 
 VALUES('$trade_name' , '$drug_formula', '$administration_method', $drug_price, '$expiry_date');";
 $db->insertData($sql);
-
 
 ?>
