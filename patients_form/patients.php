@@ -63,17 +63,18 @@
 
 
             // Preparing a statement to insert the data:
-            $sql = "INSERT INTO tbl_patients (patient_firstname, patient_surname, patient_address, patient_email, patient_phone)
-            VALUES (?, ?, ?, ?, ?)"; // The sql parametized statement
+            $sql = "INSERT INTO tbl_patients (patient_firstname, patient_surname, patient_dob, patient_address, patient_email, patient_phone)
+            VALUES (?, ?, ?, ?, ?, ?)"; // The sql parametized statement
             $statement = $conn->prepare($sql); // prepare the sql statement
 
             // Bind values to parameters:
-            $statement->bind_param("sssss", $patient_firstname, $patient_surname, $patient_address, $patient_email, $patient_phone);
+            $statement->bind_param("ssssss", $patient_firstname, $patient_surname, $patient_dob, $patient_address, $patient_email, $patient_phone);
 
             // Obtain values from the input fields of the form using $_POST[]:
             //$patient_ssn = $_POST['patient_ssn'];
             $patient_firstname = $_POST['patient_firstname'];
             $patient_surname = $_POST['patient_surname'];
+            $patient_dob = $_POST['patient_dob'];
             $patient_address = $_POST['patient_address'];
             $patient_email = $_POST['patient_email'];
             $patient_phone = $_POST['patient_phone'];
