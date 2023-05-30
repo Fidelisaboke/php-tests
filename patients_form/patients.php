@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <!--<link rel="stylesheet" href="/styles.css">-->
     <title>Patients Form</title>
+    <style>
+        body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: aliceblue;
+        }
+        form {
+            margin: 0% auto;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 360px;
+            align-items: center;
+            background: linear-gradient(176deg, rgb(49 124 49), #22ef22);
+        }
+        #patient-form-header{
+            text-align: center;
+        }
+        h4{
+            font-style: italic;
+            font-weight: normal;
+        }
+        #button-submit:hover{
+            background: rgb(110, 106, 106);
+            color: white;
+
+        }
+    </style>
 </head>
 <body>
     <form id="patient-form" action="add_patients.php" method="POST">
